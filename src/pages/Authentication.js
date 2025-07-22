@@ -40,6 +40,9 @@ export const action = async ({ request, params }) => {
   }
 
   //todo -- token management
+  const resData = await response.json();
+  const token = resData.token;
+  localStorage.setItem('token', token);
 
   return redirect('/');
 
