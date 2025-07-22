@@ -7,9 +7,6 @@ const [searchParams, setSearchParams] = useSearchParams();
 
 const isLogin = searchParams.get('mode') === 'login'; 
 
-
-
-
   return (
     <>
       <Form method="post" className={classes.form}>
@@ -23,7 +20,7 @@ const isLogin = searchParams.get('mode') === 'login';
           <input id="password" type="password" name="password" required />
         </p>
         <div className={classes.actions}>
-          <Link to={`?mode=${isLogin ? 'signin': 'login'}`}>
+          <Link to={`?mode=${isLogin ? 'signup': 'login'}`}>
             {isLogin ? 'Create new user' : 'Login'}
           </Link>
           <button>Save</button>
